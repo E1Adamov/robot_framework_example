@@ -46,23 +46,23 @@ Click Menu Item
     Mouse Over                           (//header)[1]
 
 Get Shop Items Sorted By Price Descending
-        Wait Until Page Contains Element     ${product_locator}
-        ${items_unsorted}=     Get WebElements       ${product_locator}
-        ${items_sorted}=    sort_shopping_items_by_price_descending     ${items_unsorted}
-        [return]    ${items_sorted}
+    Wait Until Page Contains Element     ${product_locator}
+    ${items_unsorted}=     Get WebElements       ${product_locator}
+    ${items_sorted}=    sort_shopping_items_by_price_descending     ${items_unsorted}
+    [return]    ${items_sorted}
 
 Click Any Available Size
-        Wait Until Page Contains Element            ${available_size_locator}
-        ${available_sizes}=     Get WebElements     ${available_size_locator}
-        Click Element    ${available_sizes}[0]
+    Wait Until Page Contains Element            ${available_size_locator}
+    ${available_sizes}=     Get WebElements     ${available_size_locator}
+    Click Element    ${available_sizes}[0]
 
 Click Add To Cart
-        Wait Until Element Is Visible     ${add_to_cart_button_locator}
-        Click Element                     ${add_to_cart_button_locator}
+    Wait Until Element Is Visible     ${add_to_cart_button_locator}
+    Click Element                     ${add_to_cart_button_locator}
 
 Wait For Shopping Item To Be Added To Cart
-        Wait Until Element Is Visible   ${added_to_cart_successfully_locator}
-        Wait Until Keyword Succeeds     10      1   Element Should Not Be Visible     ${added_to_cart_successfully_locator}
+    Wait Until Element Is Visible   ${added_to_cart_successfully_locator}
+    Wait Until Keyword Succeeds     10      1   Element Should Not Be Visible     ${added_to_cart_successfully_locator}
 
 Click Cart Icon
     Wait Until Element Is Visible   ${cart_icon_locator}
