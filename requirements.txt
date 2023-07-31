@@ -1,4 +1,0 @@
-robotframework
-robotframework-seleniumlibrary==6.0.0
-webdriver-manager==3.8.0
-selenium==4.9.1  # fix for a robotframework-seleniumlibrary issue
